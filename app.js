@@ -3,7 +3,7 @@ const multer = require("multer");
 const app = express();
 const fs = require('fs')
 
-var storage = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, './public/uploads')
     },
@@ -13,7 +13,7 @@ var storage = multer.diskStorage({
     }
   })
    
-var upload = multer({ storage: storage })
+const upload = multer({ storage: storage })
 
 const uploaded_files=[]
 
